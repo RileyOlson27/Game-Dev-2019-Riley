@@ -1,0 +1,37 @@
+<title>
+T3D06 - Move Image - Riley
+</title>
+<h2 align=center>
+Move Image by Riley
+</h2>
+
+<input type=text value=0 onMouseOver="{
+	this.value = 'x = ' + document.getElementById('myImage01').style.left
+}">
+
+<br>
+
+<img align=center src="fat bike.jpg" width="300" id="myImage01"
+style="position:relative; left:0px; top:0px; height:300px; width:500px">
+
+<br>
+<br>
+
+<input type=button value="Go Left" onClick="{
+	document.getElementById('myImage01').style.left = 
+	parseInt(document.getElementById('myImage01').style.left) - 10 + 'px'
+}">
+
+<input type=button value="Go Down" onClick="{
+	document.getElementById('myImage01').style.Top = 
+	parseInt(document.getElementById('myImage01').style.Top) - 10 + 'px'
+}">
+
+
+
+
+<input type=button value="Go Right" onClick="{
+	document.getElementById('myImage01').style.left = 
+	parseInt(document.getElementById('myImage01').style.left) + 10 + 'px'
+}">
+
