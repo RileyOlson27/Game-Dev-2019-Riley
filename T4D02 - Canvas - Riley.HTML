@@ -1,0 +1,227 @@
+<h2 align=center>Basic Canvas drawing</h2>
+
+You use loops and variables to make fast fancy drawings <br><br>
+
+<input type=button value="The Illuminate are Always Watching" onclick="{
+   myContext.beginPath();
+   myContext.lineWidth = 2;   
+   myContext.strokeStyle = 'black';
+   myContext.moveTo(500,100);
+   myContext.lineTo(100,500);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.lineWidth = 2; 
+   myContext.strokeStyle = 'black';  
+   myContext.moveTo(900,500);
+   myContext.lineTo(500,100);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.lineWidth = 2; 
+   myContext.strokeStyle = 'black';  
+   myContext.moveTo(100,500);
+   myContext.lineTo(900,500);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.lineWidth = 2;
+   myContext.strokeStyle = 'black';
+   myContext.arc(500, 200, 40, 0, 2 * Math.PI);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.lineWidth = 2;
+   myContext.strokeStyle = 'black';
+   myContext.arc(500, 200, 10, 3.25, 2 * Math.PI);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.lineWidth = 2;
+   myContext.strokeStyle = 'black';
+   myContext.arc(500, 200, 1, 0, 2 * Math.PI);
+   myContext.stroke();
+
+}">
+
+
+<input type=button value="m'Lympics" onclick="{
+   myContext.beginPath();
+   myContext.lineWidth = 10;
+   myContext.strokeStyle = 'blue';
+   myContext.arc(200, 100, 40, 0, 2 * Math.PI);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.lineWidth = 10;
+   myContext.strokeStyle = 'yellow';
+   myContext.arc(250, 150, 40, 0, 2 * Math.PI);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.lineWidth = 10;
+   myContext.strokeStyle = 'black';
+   myContext.arc(300, 100, 40, 0, 2 * Math.PI);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.lineWidth = 10;
+   myContext.strokeStyle = 'green';
+   myContext.arc(350, 150, 40, 0, 2 * Math.PI);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.lineWidth = 10;
+   myContext.strokeStyle = 'red';
+   myContext.arc(400, 100, 40, 0, 2 * Math.PI);
+   myContext.stroke();
+
+}">
+
+
+<input type=button value="Mirror Text" onclick="{
+
+   myContext.font = '20px Arial';
+   myContext.fillText('Mirror', 400, 100);
+
+   myContext.translate(400, 100);  // move rotation point from 0,0
+   myContext.rotate(180 * Math.PI / 180); // 90 in degrees
+
+   myContext.fillText('Mirror', -50, -5);
+   myContext.stroke();
+
+  // reset
+   myContext.resetTransform();  // move rotation point from 0,0
+   //myContext.rotate(-180 * Math.PI / 180); // 9 in degrees
+}">
+
+<input type=button value="Rainbow" onclick="{
+   myContext.beginPath();
+   myContext.lineWidth = 10;
+   myContext.moveTo(0,600);
+   myContext.strokeStyle = 'purple';
+   myContext.quadraticCurveTo(500,100,1000,600);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.lineWidth = 10;
+   myContext.moveTo(0,590);
+   myContext.strokeStyle = 'blue';
+   myContext.quadraticCurveTo(500,90,1000,590);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.lineWidth = 10;
+   myContext.moveTo(0,580);
+   myContext.strokeStyle = 'lightblue';
+   myContext.quadraticCurveTo(500,80,1000,580);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.lineWidth = 10;
+   myContext.moveTo(0,570);
+   myContext.strokeStyle = 'green';
+   myContext.quadraticCurveTo(500,70,1000,570);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.lineWidth = 10;
+   myContext.moveTo(0,560);
+   myContext.strokeStyle = 'yellow';
+   myContext.quadraticCurveTo(500,60,1000,560);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.lineWidth = 10;
+   myContext.moveTo(0,550);
+   myContext.strokeStyle = 'orange';
+   myContext.quadraticCurveTo(500,50,1000,550);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.lineWidth = 10;
+   myContext.moveTo(0,540);
+   myContext.strokeStyle = 'red';
+   myContext.quadraticCurveTo(500,40,1000,540);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.lineWidth = 5;   
+   myContext.strokeStyle = 'black';
+   myContext.moveTo(0,0);
+   myContext.lineTo(0,600);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.lineWidth = 5;  
+   myContext.moveTo(1000,0);
+   myContext.lineTo(1000,600);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.lineWidth = 5;  
+   myContext.moveTo(0,0);
+   myContext.lineTo(1000,0);
+   myContext.stroke();
+
+   myContext.beginPath();
+   myContext.lineWidth = 5;  
+   myContext.moveTo(0,600);
+   myContext.lineTo(1000,600);
+   myContext.stroke();
+}">
+
+
+<input type=button value="Create a Gradient" onclick="{
+   let myGradient = myContext.createLinearGradient(0, 0, 1000, 600);
+   myGradient.addColorStop(0, 'red');
+   myGradient.addColorStop(0.5, 'orange');
+   myGradient.addColorStop(1, 'yellow');
+
+   myContext.fillStyle = myGradient;
+   myContext.fillRect(0, 0, 1000, 600);
+
+   // reset fillstyle
+   myContext.fillStyle = 'black';
+}">
+
+<br><br>
+
+<input type=button value="Clear Quadrant 1" onclick="{
+   myContext.clearRect(0, 0, 500, 300);
+}">
+
+
+<input type=button value="Clear Quadrant 2" onclick="{
+   myContext.clearRect(500, 0, 500, 300);
+}">
+
+<input type=button value="Clear Quadrant 3" onclick="{
+   myContext.clearRect(500, 300, 500, 300);
+}">
+
+
+<input type=button value="Clear Quadrant 4" onclick="{
+   myContext.clearRect(0, 300, 500, 300);
+}">
+
+
+
+
+
+
+
+<input type=button value="Clear all" onclick="{
+   myContext.clearRect(0, 0, myCanvas.width, myCanvas.height);
+}">
+
+<br><br>
+
+<canvas id="myCoolTag" width="1000" height="600" style="border:1px solid #000000;"></canvas>
+
+<script>
+   // set up global variables
+   let myCanvas=document.getElementById('myCoolTag');
+   let myContext=myCanvas.getContext('2d');
+
+</script>
