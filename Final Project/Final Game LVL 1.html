@@ -1,0 +1,631 @@
+<body id="myBody" style="background-repeat:repeat; background-size: 100%" background="Image02.jpg">
+
+<script>
+   let myGlobalX = 0
+   let myClock
+</script>
+
+<script> 
+   var myLeftRight = 0 
+   var myMeteors = 0
+
+
+function myCollision(){
+
+	if ( myHitOther('myRocket','myMeteor01') ){
+		document.location.reload()
+	}
+
+	if ( myHitOther('myRocket','myMeteor02') ){
+		document.location.reload()
+	}
+
+	if ( myHitOther('myRocket','myMeteor03') ){
+		document.location.reload()
+	}
+
+	if ( myHitOther('myRocket','myMeteor04') ){
+		document.location.reload()
+	}
+
+	if ( myHitOther('myRocket','myMeteor05') ){
+		document.location.reload()
+	}
+
+	if ( myHitOther('myRocket','myMeteor06') ){
+		document.location.reload()
+	}
+
+	if ( myHitOther('myRocket','myMeteor07') ){
+		document.location.reload()
+	}
+
+	if ( myHitOther('myRocket','myMeteor08') ){
+		document.location.reload()
+	}
+
+	if ( myHitOther('myRocket','myMeteor09') ){
+		document.location.reload()
+	}
+
+	if ( myHitOther('myRocket','myMeteor10') ){
+		document.location.reload()
+	}
+
+	if ( myHitOther('myRocket','myMeteor11') ){
+		document.location.reload()
+	}
+
+	if ( myHitOther('myRocket','myMeteor12') ){
+		 document.location.reload()
+	}
+
+	if ( myHitOther('myRocket','myMeteor13') ){
+		document.location.reload()
+	}
+
+	if ( myHitOther('myRocket','myMeteor14') ){
+		document.location.reload()
+	}
+
+	if ( myHitOther('myRocket','myMeteor15') ){
+		document.location.reload()
+	}
+
+	if ( myHitOther('myRocket','myMeteor16') ){
+		document.location.reload()
+	}
+
+	if ( myHitOther('myRocket','myMeteor17') ){
+		document.location.reload()
+	}
+
+	if ( myHitOther('myRocket','myMeteor18') ){
+		document.location.reload()
+	}
+
+	if ( myHitOther('myRocket','myMeteor19') ){
+		document.location.reload()
+	}
+}
+
+
+</script>
+
+<input id="myText01" type=text value=0 size=1
+
+	 document.getElementById('myImage01').style.top =
+	parseInt(document.getElementById('myImage01').style.top + 10 + 'px'
+>
+<input id="myScore" type=text value=0 size=1>
+<br>
+                                                         
+<img id="myRocket" style="position:absolute; width:30px; height:45px; top:550px; left:650px;" src="image05.jpg">
+
+
+<img id="myImageBar" style="position:absolute; width:1600px; height:100px; top:650px; left:0px;" src="image04.jpg">
+
+<img id="myMeteor01" style="position:absolute; width:80px; height:80px; top:-400px; left:20px;" src="image03.jpg">
+<img id="myMeteor02" style="position:absolute; width:80px; height:80px; top:-625px; left:100px;" src="image03.jpg">
+<img id="myMeteor03" style="position:absolute; width:80px; height:80px; top:-575px; left:180px;" src="image03.jpg">
+<img id="myMeteor04" style="position:absolute; width:80px; height:80px; top:-900px; left:260px;" src="image03.jpg">
+<img id="myMeteor05" style="position:absolute; width:80px; height:80px; top:-610px; left:340px;" src="image03.jpg">
+<img id="myMeteor06" style="position:absolute; width:80px; height:80px; top:-705px; left:420px;" src="image03.jpg">
+<img id="myMeteor07" style="position:absolute; width:80px; height:80px; top:-1115px; left:500px;" src="image03.jpg">
+<img id="myMeteor08" style="position:absolute; width:80px; height:80px; top:-710px; left:580px;" src="image03.jpg">
+<img id="myMeteor09" style="position:absolute; width:80px; height:80px; top:-375px; left:660px;" src="image03.jpg">
+<img id="myMeteor10" style="position:absolute; width:80px; height:80px; top:-400px; left:740px;" src="image03.jpg">
+<img id="myMeteor11" style="position:absolute; width:80px; height:80px; top:-690px; left:820px;" src="image03.jpg">
+<img id="myMeteor12" style="position:absolute; width:80px; height:80px; top:-425px; left:900px;" src="image03.jpg">
+<img id="myMeteor13" style="position:absolute; width:80px; height:80px; top:-1015px; left:980px;" src="image03.jpg">
+<img id="myMeteor14" style="position:absolute; width:80px; height:80px; top:-610px; left:1060px;" src="image03.jpg">
+<img id="myMeteor15" style="position:absolute; width:80px; height:80px; top:-315px; left:1140px;" src="image03.jpg">
+<img id="myMeteor16" style="position:absolute; width:80px; height:80px; top:-520px; left:1220px;" src="image03.jpg">
+<img id="myMeteor17" style="position:absolute; width:80px; height:80px; top:-1015px; left:1300px;" src="image03.jpg">
+<img id="myMeteor18" style="position:absolute; width:80px; height:80px; top:-610px; left:1380px;" src="image03.jpg">
+<img id="myMeteor19" style="position:absolute; width:80px; height:80px; top:-315px; left:1460px;" src="image03.jpg">
+
+
+<body onkeydown="{
+
+	document.all.myText01.value = event.key
+
+	if (event.key == 'd') {
+   clearInterval(myLeftRight)
+
+   myLeftRight = setInterval(function(){
+
+      document.getElementById('myRocket').style.left = parseInt(document.getElementById('myRocket').style.left) +15 + 'px'
+
+      if (parseInt(document.getElementById('myRocket').style.left) > 1400){
+         document.getElementById('myRocket').style.left = '1400px'
+      }
+       myCollision()
+   }, 60)
+}
+	if (event.key == 'D') {
+   clearInterval(myLeftRight)
+   myLeftRight = setInterval(function(){
+      document.getElementById('myRocket').style.left = parseInt(document.getElementById('myRocket').style.left) +15 + 'px'
+
+      if (parseInt(document.getElementById('myRocket').style.left) > 1400){
+         document.getElementById('myRocket').style.left = '1400px'
+      }
+       myCollision()
+   }, 60)
+}
+	if (event.key == 'a') {
+   clearInterval(myLeftRight)
+   myLeftRight = setInterval(function(){
+      document.getElementById('myRocket').style.left = parseInt(document.getElementById('myRocket').style.left) -+15 + 'px'
+
+      if (parseInt(document.getElementById('myRocket').style.left) < 0){
+         document.getElementById('myRocket').style.left = '0px'
+      }
+       myCollision()
+   }, 60)
+}
+	if (event.key == 'A') {
+   clearInterval(myLeftRight)
+   myLeftRight = setInterval(function(){
+      document.getElementById('myRocket').style.left = parseInt(document.getElementById('myRocket').style.left) -+15 + 'px'
+
+      if (parseInt(document.getElementById('myRocket').style.left) < 0){
+         document.getElementById('myRocket').style.left = '0px'
+      }
+       myCollision()
+   }, 60)
+}
+
+    myCollision()
+
+
+
+	if (event.key == ' ') {
+
+   myMeteors = setInterval(function(){
+   clearInterval(myMeteors)
+      document.getElementById('myMeteor01').style.top = parseInt(document.getElementById('myMeteor01').style.top) +10 + 'px'
+
+      if (parseInt(document.getElementById('myMeteor01').style.top) > 670){
+         document.getElementById('myMeteor01').style.top = '-620px'
+	 document.getElementById('myScore').value = parseInt(document.getElementById('myScore').value) + 1
+      }
+      if (parseInt(document.getElementById('myScore').value) > 50){
+	 document.getElementById('myMeteor01').style.top = parseInt(document.getElementById('myMeteor01').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 100){
+	 document.getElementById('myMeteor01').style.top = parseInt(document.getElementById('myMeteor01').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 150){
+	 document.getElementById('myMeteor01').style.top = parseInt(document.getElementById('myMeteor01').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 200){
+	 document.getElementById('myMeteor01').style.top = parseInt(document.getElementById('myMeteor01').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 250){
+	 location='you win.png'
+      }
+       myCollision()
+   }, 60)
+
+   myMeteors = setInterval(function(){
+      document.getElementById('myMeteor02').style.top = parseInt(document.getElementById('myMeteor02').style.top) +10 + 'px'
+
+      if (parseInt(document.getElementById('myMeteor02').style.top) > 670){
+         document.getElementById('myMeteor02').style.top = '-620px'
+	 document.getElementById('myScore').value = parseInt(document.getElementById('myScore').value) + 1
+      }
+      if (parseInt(document.getElementById('myScore').value) > 50){
+	 document.getElementById('myMeteor02').style.top = parseInt(document.getElementById('myMeteor02').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 100){
+	 document.getElementById('myMeteor02').style.top = parseInt(document.getElementById('myMeteor02').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 150){
+	 document.getElementById('myMeteor02').style.top = parseInt(document.getElementById('myMeteor02').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 200){
+	 document.getElementById('myMeteor02').style.top = parseInt(document.getElementById('myMeteor02').style.top) +5 + 'px'
+      }
+       myCollision()
+   }, 60)
+
+
+   myMeteors = setInterval(function(){
+      document.getElementById('myMeteor03').style.top = parseInt(document.getElementById('myMeteor03').style.top) +10 + 'px'
+
+      if (parseInt(document.getElementById('myMeteor03').style.top) > 670){
+         document.getElementById('myMeteor03').style.top = '-525px'
+	 document.getElementById('myScore').value = parseInt(document.getElementById('myScore').value) + 1
+      }
+      if (parseInt(document.getElementById('myScore').value) > 50){
+	 document.getElementById('myMeteor03').style.top = parseInt(document.getElementById('myMeteor03').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 100){
+	 document.getElementById('myMeteor03').style.top = parseInt(document.getElementById('myMeteor03').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 150){
+	 document.getElementById('myMeteor03').style.top = parseInt(document.getElementById('myMeteor03').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 200){
+	 document.getElementById('myMeteor03').style.top = parseInt(document.getElementById('myMeteor03').style.top) +5 + 'px'
+      }
+       myCollision()
+   }, 60)
+
+
+   myMeteors = setInterval(function(){
+      document.getElementById('myMeteor04').style.top = parseInt(document.getElementById('myMeteor04').style.top) +10 + 'px'
+
+      if (parseInt(document.getElementById('myMeteor04').style.top) > 670){
+         document.getElementById('myMeteor04').style.top = '-375px'
+	 document.getElementById('myScore').value = parseInt(document.getElementById('myScore').value) + 1
+      }
+      if (parseInt(document.getElementById('myScore').value) > 50){
+	 document.getElementById('myMeteor04').style.top = parseInt(document.getElementById('myMeteor04').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 100){
+	 document.getElementById('myMeteor04').style.top = parseInt(document.getElementById('myMeteor04').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 150){
+	 document.getElementById('myMeteor04').style.top = parseInt(document.getElementById('myMeteor04').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 200){
+	 document.getElementById('myMeteor04').style.top = parseInt(document.getElementById('myMeteor04').style.top) +5 + 'px'
+      }
+   }, 60)
+
+   myMeteors = setInterval(function(){
+      document.getElementById('myMeteor05').style.top = parseInt(document.getElementById('myMeteor05').style.top) +10 + 'px'
+
+      if (parseInt(document.getElementById('myMeteor05').style.top) > 670){
+         document.getElementById('myMeteor05').style.top = '-515px'
+	 document.getElementById('myScore').value = parseInt(document.getElementById('myScore').value) + 1
+      }
+      if (parseInt(document.getElementById('myScore').value) > 50){
+	 document.getElementById('myMeteor05').style.top = parseInt(document.getElementById('myMeteor05').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 100){
+	 document.getElementById('myMeteor05').style.top = parseInt(document.getElementById('myMeteor05').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 150){
+	 document.getElementById('myMeteor05').style.top = parseInt(document.getElementById('myMeteor05').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 200){
+	 document.getElementById('myMeteor05').style.top = parseInt(document.getElementById('myMeteor05').style.top) +5 + 'px'
+      }
+       myCollision()
+   }, 60)
+
+   myMeteors = setInterval(function(){
+      document.getElementById('myMeteor06').style.top = parseInt(document.getElementById('myMeteor06').style.top) +10 + 'px'
+
+      if (parseInt(document.getElementById('myMeteor06').style.top) > 670){
+         document.getElementById('myMeteor06').style.top = '-425px'
+	 document.getElementById('myScore').value = parseInt(document.getElementById('myScore').value) + 1
+      }
+      if (parseInt(document.getElementById('myScore').value) > 50){
+	 document.getElementById('myMeteor06').style.top = parseInt(document.getElementById('myMeteor06').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 100){
+	 document.getElementById('myMeteor06').style.top = parseInt(document.getElementById('myMeteor06').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 150){
+	 document.getElementById('myMeteor06').style.top = parseInt(document.getElementById('myMeteor06').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 200){
+	 document.getElementById('myMeteor06').style.top = parseInt(document.getElementById('myMeteor06').style.top) +5 + 'px'
+      }
+       myCollision()
+   }, 60)
+
+   myMeteors = setInterval(function(){
+      document.getElementById('myMeteor07').style.top = parseInt(document.getElementById('myMeteor07').style.top) +10 + 'px'
+
+      if (parseInt(document.getElementById('myMeteor07').style.top) > 670){
+         document.getElementById('myMeteor07').style.top = '-685px'
+	 document.getElementById('myScore').value = parseInt(document.getElementById('myScore').value) + 1
+      }
+      if (parseInt(document.getElementById('myScore').value) > 50){
+	 document.getElementById('myMeteor07').style.top = parseInt(document.getElementById('myMeteor07').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 100){
+	 document.getElementById('myMeteor07').style.top = parseInt(document.getElementById('myMeteor07').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 150){
+	 document.getElementById('myMeteor07').style.top = parseInt(document.getElementById('myMeteor07').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 200){
+	 document.getElementById('myMeteor07').style.top = parseInt(document.getElementById('myMeteor07').style.top) +5 + 'px'
+      }
+   }, 60)
+
+   myMeteors = setInterval(function(){
+      document.getElementById('myMeteor08').style.top = parseInt(document.getElementById('myMeteor08').style.top) +10 + 'px'
+
+      if (parseInt(document.getElementById('myMeteor08').style.top) > 670){
+         document.getElementById('myMeteor08').style.top = '-580px'
+	 document.getElementById('myScore').value = parseInt(document.getElementById('myScore').value) + 1
+      }
+      if (parseInt(document.getElementById('myScore').value) > 50){
+	 document.getElementById('myMeteor08').style.top = parseInt(document.getElementById('myMeteor08').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 100){
+	 document.getElementById('myMeteor08').style.top = parseInt(document.getElementById('myMeteor08').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 150){
+	 document.getElementById('myMeteor08').style.top = parseInt(document.getElementById('myMeteor08').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 200){
+	 document.getElementById('myMeteor08').style.top = parseInt(document.getElementById('myMeteor08').style.top) +5 + 'px'
+      }
+       myCollision()
+   }, 60)
+
+   myMeteors = setInterval(function(){
+      document.getElementById('myMeteor09').style.top = parseInt(document.getElementById('myMeteor09').style.top) +10 + 'px'
+
+      if (parseInt(document.getElementById('myMeteor09').style.top) > 670){
+         document.getElementById('myMeteor09').style.top = '-525px'
+	 document.getElementById('myScore').value = parseInt(document.getElementById('myScore').value) + 1
+      }
+      if (parseInt(document.getElementById('myScore').value) > 50){
+	 document.getElementById('myMeteor09').style.top = parseInt(document.getElementById('myMeteor09').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 100){
+	 document.getElementById('myMeteor09').style.top = parseInt(document.getElementById('myMeteor09').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 150){
+	 document.getElementById('myMeteor09').style.top = parseInt(document.getElementById('myMeteor09').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 200){
+	 document.getElementById('myMeteor09').style.top = parseInt(document.getElementById('myMeteor09').style.top) +5 + 'px'
+      }
+       myCollision()
+   }, 60)
+
+
+   myMeteors = setInterval(function(){
+      document.getElementById('myMeteor10').style.top = parseInt(document.getElementById('myMeteor10').style.top) +10 + 'px'
+
+      if (parseInt(document.getElementById('myMeteor10').style.top) > 670){
+         document.getElementById('myMeteor10').style.top = '-375px'
+	 document.getElementById('myScore').value = parseInt(document.getElementById('myScore').value) + 1
+      }
+      if (parseInt(document.getElementById('myScore').value) > 50){
+	 document.getElementById('myMeteor10').style.top = parseInt(document.getElementById('myMeteor10').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 100){
+	 document.getElementById('myMeteor10').style.top = parseInt(document.getElementById('myMeteor10').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 150){
+	 document.getElementById('myMeteor10').style.top = parseInt(document.getElementById('myMeteor10').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 200){
+	 document.getElementById('myMeteor10').style.top = parseInt(document.getElementById('myMeteor10').style.top) +5 + 'px'
+      }
+       myCollision()
+   }, 60)
+
+   myMeteors = setInterval(function(){
+      document.getElementById('myMeteor11').style.top = parseInt(document.getElementById('myMeteor11').style.top) +10 + 'px'
+
+      if (parseInt(document.getElementById('myMeteor11').style.top) > 670){
+         document.getElementById('myMeteor11').style.top = '-515px'
+	 document.getElementById('myScore').value = parseInt(document.getElementById('myScore').value) + 1
+      }
+      if (parseInt(document.getElementById('myScore').value) > 50){
+	 document.getElementById('myMeteor11').style.top = parseInt(document.getElementById('myMeteor11').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 100){
+	 document.getElementById('myMeteor11').style.top = parseInt(document.getElementById('myMeteor11').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 150){
+	 document.getElementById('myMeteor11').style.top = parseInt(document.getElementById('myMeteor11').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 200){
+	 document.getElementById('myMeteor11').style.top = parseInt(document.getElementById('myMeteor11').style.top) +5 + 'px'
+      }
+       myCollision()
+   }, 60)
+
+   myMeteors = setInterval(function(){
+      document.getElementById('myMeteor12').style.top = parseInt(document.getElementById('myMeteor12').style.top) +10 + 'px'
+
+      if (parseInt(document.getElementById('myMeteor12').style.top) > 670){
+         document.getElementById('myMeteor12').style.top = '-425px'
+	 document.getElementById('myScore').value = parseInt(document.getElementById('myScore').value) + 1
+      }
+      if (parseInt(document.getElementById('myScore').value) > 50){
+	 document.getElementById('myMeteor12').style.top = parseInt(document.getElementById('myMeteor12').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 100){
+	 document.getElementById('myMeteor12').style.top = parseInt(document.getElementById('myMeteor12').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 150){
+	 document.getElementById('myMeteor12').style.top = parseInt(document.getElementById('myMeteor12').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 200){
+	 document.getElementById('myMeteor12').style.top = parseInt(document.getElementById('myMeteor12').style.top) +5 + 'px'
+      }
+       myCollision()
+   }, 60)
+
+   myMeteors = setInterval(function(){
+      document.getElementById('myMeteor13').style.top = parseInt(document.getElementById('myMeteor13').style.top) +10 + 'px'
+
+      if (parseInt(document.getElementById('myMeteor13').style.top) > 670){
+         document.getElementById('myMeteor13').style.top = '-685px'
+	 document.getElementById('myScore').value = parseInt(document.getElementById('myScore').value) + 1
+      }
+      if (parseInt(document.getElementById('myScore').value) > 50){
+	 document.getElementById('myMeteor13').style.top = parseInt(document.getElementById('myMeteor13').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 100){
+	 document.getElementById('myMeteor13').style.top = parseInt(document.getElementById('myMeteor13').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 150){
+	 document.getElementById('myMeteor13').style.top = parseInt(document.getElementById('myMeteor13').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 200){
+	 document.getElementById('myMeteor13').style.top = parseInt(document.getElementById('myMeteor13').style.top) +5 + 'px'
+      }
+       myCollision()
+   }, 60)
+
+   myMeteors = setInterval(function(){
+      document.getElementById('myMeteor14').style.top = parseInt(document.getElementById('myMeteor14').style.top) +10 + 'px'
+
+      if (parseInt(document.getElementById('myMeteor14').style.top) > 670){
+         document.getElementById('myMeteor14').style.top = '-580px'
+	 document.getElementById('myScore').value = parseInt(document.getElementById('myScore').value) + 1
+      }
+      if (parseInt(document.getElementById('myScore').value) > 50){
+	 document.getElementById('myMeteor14').style.top = parseInt(document.getElementById('myMeteor14').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 100){
+	 document.getElementById('myMeteor14').style.top = parseInt(document.getElementById('myMeteor14').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 150){
+	 document.getElementById('myMeteor14').style.top = parseInt(document.getElementById('myMeteor14').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 200){
+	 document.getElementById('myMeteor14').style.top = parseInt(document.getElementById('myMeteor14').style.top) +5 + 'px'
+      }
+       myCollision()
+   }, 60)
+
+   myMeteors = setInterval(function(){
+      document.getElementById('myMeteor15').style.top = parseInt(document.getElementById('myMeteor15').style.top) +10 + 'px'
+
+      if (parseInt(document.getElementById('myMeteor15').style.top) > 670){
+         document.getElementById('myMeteor15').style.top = '-620px'
+	 document.getElementById('myScore').value = parseInt(document.getElementById('myScore').value) + 1
+      }
+      if (parseInt(document.getElementById('myScore').value) > 50){
+	 document.getElementById('myMeteor15').style.top = parseInt(document.getElementById('myMeteor15').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 100){
+	 document.getElementById('myMeteor15').style.top = parseInt(document.getElementById('myMeteor15').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 150){
+	 document.getElementById('myMeteor15').style.top = parseInt(document.getElementById('myMeteor15').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 200){
+	 document.getElementById('myMeteor15').style.top = parseInt(document.getElementById('myMeteor15').style.top) +5 + 'px'
+      }
+       myCollision()
+   }, 60)
+
+   myMeteors = setInterval(function(){
+      document.getElementById('myMeteor16').style.top = parseInt(document.getElementById('myMeteor16').style.top) +10 + 'px'
+
+      if (parseInt(document.getElementById('myMeteor16').style.top) > 670){
+         document.getElementById('myMeteor16').style.top = '-620px'
+	 document.getElementById('myScore').value = parseInt(document.getElementById('myScore').value) + 1
+      }
+      if (parseInt(document.getElementById('myScore').value) > 50){
+	 document.getElementById('myMeteor16').style.top = parseInt(document.getElementById('myMeteor16').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 100){
+	 document.getElementById('myMeteor16').style.top = parseInt(document.getElementById('myMeteor16').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 150){
+	 document.getElementById('myMeteor16').style.top = parseInt(document.getElementById('myMeteor16').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 200){
+	 document.getElementById('myMeteor16').style.top = parseInt(document.getElementById('myMeteor16').style.top) +5 + 'px'
+      }
+       myCollision()
+   }, 60)
+
+   myMeteors = setInterval(function(){
+      document.getElementById('myMeteor17').style.top = parseInt(document.getElementById('myMeteor17').style.top) +10 + 'px'
+
+      if (parseInt(document.getElementById('myMeteor17').style.top) > 670){
+         document.getElementById('myMeteor17').style.top = '-685px'
+	 document.getElementById('myScore').value = parseInt(document.getElementById('myScore').value) + 1
+      }
+      if (parseInt(document.getElementById('myScore').value) > 50){
+	 document.getElementById('myMeteor17').style.top = parseInt(document.getElementById('myMeteor17').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 100){
+	 document.getElementById('myMeteor17').style.top = parseInt(document.getElementById('myMeteor17').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 150){
+	 document.getElementById('myMeteor17').style.top = parseInt(document.getElementById('myMeteor17').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 200){
+	 document.getElementById('myMeteor17').style.top = parseInt(document.getElementById('myMeteor17').style.top) +5 + 'px'
+      }
+       myCollision()
+   }, 60)
+
+   myMeteors = setInterval(function(){
+      document.getElementById('myMeteor18').style.top = parseInt(document.getElementById('myMeteor18').style.top) +10 + 'px'
+
+      if (parseInt(document.getElementById('myMeteor18').style.top) > 670){
+         document.getElementById('myMeteor18').style.top = '-420px'
+	 document.getElementById('myScore').value = parseInt(document.getElementById('myScore').value) + 1
+      }
+      if (parseInt(document.getElementById('myScore').value) > 50){
+	 document.getElementById('myMeteor18').style.top = parseInt(document.getElementById('myMeteor18').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 100){
+	 document.getElementById('myMeteor18').style.top = parseInt(document.getElementById('myMeteor18').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 150){
+	 document.getElementById('myMeteor18').style.top = parseInt(document.getElementById('myMeteor18').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 200){
+	 document.getElementById('myMeteor18').style.top = parseInt(document.getElementById('myMeteor18').style.top) +5 + 'px'
+      }
+       myCollision()
+   }, 60)
+
+   myMeteors = setInterval(function(){
+      document.getElementById('myMeteor19').style.top = parseInt(document.getElementById('myMeteor19').style.top) +10 + 'px'
+
+      if (parseInt(document.getElementById('myMeteor19').style.top) > 670){
+         document.getElementById('myMeteor19').style.top = '-490px'
+	 document.getElementById('myScore').value = parseInt(document.getElementById('myScore').value) + 1
+      }
+      if (parseInt(document.getElementById('myScore').value) > 50){
+	 document.getElementById('myMeteor19').style.top = parseInt(document.getElementById('myMeteor19').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 100){
+	 document.getElementById('myMeteor19').style.top = parseInt(document.getElementById('myMeteor19').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 150){
+	 document.getElementById('myMeteor19').style.top = parseInt(document.getElementById('myMeteor19').style.top) +5 + 'px'
+      }
+      if (parseInt(document.getElementById('myScore').value) > 200){
+	 document.getElementById('myMeteor19').style.top = parseInt(document.getElementById('myMeteor19').style.top) +5 + 'px'
+      }
+       myCollision()
+   }, 60)
+}
+}">
+
+<script>
+function myHitOther(my1,my2){
+   left1   = parseInt(document.getElementById(my1).style.left)
+   right1  = left1 + parseInt(document.getElementById(my1).style.width)
+   top1    = parseInt(document.getElementById(my1).style.top)   
+   bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
+   left2   = parseInt(document.getElementById(my2).style.left)
+   right2  = left2 + parseInt(document.getElementById(my2).style.width)
+   top2    = parseInt(document.getElementById(my2).style.top)   
+   bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
+   if ((right1  >=  left2  ) &&      	   
+       (bottom1 >=  top2   ) &&
+       (left1   <=  right2 ) &&
+       (top1    <=  bottom2) ){
+       return true
+   }
+}
+</script>
+
+
+
