@@ -1,0 +1,41 @@
+<h2 align=center> T3D03-random-bounce-console-score-fre.html</h2>
+
+<img src="myImage02.jpg" id="myImage01" style="position:relative;
+z-index:-1; left:0px; top:0px; height:100px; width:100px;">
+
+<input type=text id=myScore value=0>
+
+<script>
+var myLooping = 0
+var mySpeed = 10
+var myDirection = 1    // or -1
+var myTotal = 0
+</script>
+
+<input type=button value="auto right" onclick="{
+   clearInterval(myLooping)
+   myLooping = setInterval(function(){
+
+   mySpeed = (Math.floor(Math.random()*50)+5) * myDirection
+
+   document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + mySpeed + 'px'
+
+   // bounce of right side of screen
+   if (parseInt(document.getElementById('myImage01').style.left) > 1500){
+      myDirection = myDirection * -1
+      myTotal = myTotal + 1
+      document.getElementById('myScore').value = myTotal
+   }
+
+   if (parseInt(document.getElementById('myImage01').style.left) > 0){
+      myDirection = myDirection * 1
+      myTotal = myTotal + 1
+      document.getElementById('myScore').value = myTotal
+   }
+
+   console.log(mySpeed)
+   //console.log(myTotal)
+   }, 60)
+}">
+
+
